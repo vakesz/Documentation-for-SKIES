@@ -1,29 +1,6 @@
-# Dependencies
 node_modules
-
-# Build output
 public
 resources
 .hugo_build.lock
-hugo_stats.json
-
-# Environment
-.env
-.env.local
-
-# OS files
 .DS_Store
-Thumbs.db
-
-# IDE
-.idea
-*.swp
-*.swo
-
-# Logs
-pnpm-debug.log*
-
-# Etc
-.vscode
 .claude/
-CLAUDE.md

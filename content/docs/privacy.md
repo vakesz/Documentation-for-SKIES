@@ -1,112 +1,75 @@
 ---
 title: "Privacy Policy"
-description: "How SKIES Mobile protects your privacy"
-summary: "SKIES Mobile is built with privacy by design. We believe in transparency and your right to understand exactly how your data is handled."
-date: 2025-01-01T00:00:00+00:00
-lastmod: 2025-10-01T00:00:00+00:00
-draft: false
-weight: 5
+slug: "privacy-policy"
+description: "How SKIES handles your data: what stays on your device, what goes to your organization, and what is never collected."
+weight: 4
 toc: true
-seo:
-  title: "SKIES Mobile Privacy Policy"
-  description: "Privacy policy for SKIES Mobile, explaining how the app protects your data, what information it collects, and how it is built with privacy by design."
-  canonical: ""
-  noindex: false
 ---
 
-SKIES Mobile is built with **privacy by design**. We believe in transparency and your right to understand exactly how your data is handled.
+SKIES is a client app. It connects you to your organization's community service and has no server of its own. The developer does not receive, store or sell your data.
 
-## Our Privacy Commitment
+## Summary
 
-SKIES Mobile is a client-side app for iPhone, iPad, and Mac that acts as a secure bridge between you and your organization's data. We collect only essential data for core functionality and never monetize your information.
+- No analytics, advertising or tracking SDKs
+- No SKIES backend: your content goes only to your organization's service
+- Cached content is encrypted on your device
+- Summaries are generated on your device
+- iCloud Sync is optional, and you can turn it off at any time
 
-## What the App Collects
+## Who receives data
 
-### Authentication Data
+| Recipient | What and why |
+| --- | --- |
+| Your organization's service | Reading posts, activities, profiles and attachments; sending your comments, likes and activity sign-ups |
+| Microsoft sign-in | Signing you in and refreshing your session |
+| Image and video hosts | Loading images, avatars and YouTube thumbnails shown in content |
+| Apple iCloud (optional) | Syncing settings, bookmarks and read state between your Apple devices |
+| Apple App Store or Google Play | Processing a tip, if you choose to leave one |
+| Apps you choose | Links, contact details or files you open in a browser, mail, phone, Teams or another app |
 
-- **Microsoft Account Information**: Used for sign-in and authentication
-- **Access Tokens**: Stored locally on your device in the secure keychain
-- **User Profile**: Basic profile information from your organization's directory
+Like any internet request, these hosts see your device's IP address. Each one handles data under its own privacy policy, for example [Microsoft](https://privacy.microsoft.com/), [Apple](https://www.apple.com/legal/privacy/) and [Google](https://policies.google.com/privacy).
 
-**Storage**: All authentication data is stored locally on your device using iOS Secure Keychain.
+## What is stored on your device
 
-### Content You Create
+- **Account**: sign-in tokens, kept in the iOS keychain or Android keystore.
+- **Content**: posts, activities and profiles, cached in an encrypted database for offline use. Comments are never cached.
+- **Preferences**: settings, bookmarks, read state and recent searches.
+- **App Lock**: your passcode verifier. Biometric matching is done by the operating system, and SKIES never sees your fingerprint or face data.
+- **Widgets**: the activity and birthday information the iOS widgets display.
+- **Diagnostics**: a short, in-memory log with sensitive values redacted. It is never saved to disk or sent anywhere.
 
-- **Posts**: News and updates you share with your organization
-- **Comments**: Discussions and replies on posts and activities
-- **Activities**: Events and activities you create or register for
-- **Bookmarks**: Posts and activities you save for later
+## iCloud Sync
 
-**Storage**: Shared with your organization through Microsoft APIs. Cached locally for offline access.
+When enabled, SKIES syncs your settings, bookmark changes and a limited read history through Apple's iCloud key-value storage. Content itself is not synced. **Clear iCloud Data** in Settings turns sync off and removes the synced data for your account. iCloud Sync isn't available on Android.
 
-### Technical Data
+## Summaries
 
-- **Diagnostic Logs**: Error reports and performance metrics
-- **Cache Data**: Offline copies of posts, activities, and user profiles
-- **App Settings**: Your preferences for theme, notifications, and display options
+Summaries are generated on your device using Apple Intelligence. The text of a post or activity is never sent to an external AI service.
 
-**Storage**: Stored locally on your device only. Never transmitted to external servers.
+## Permissions
 
-### iCloud Sync (Optional)
+SKIES asks for permissions only when you use the related feature:
 
-When you enable iCloud Sync:
+- **Notifications** for new content and activity reminders
+- **Face ID or biometrics** for App Lock
+- **Calendar**: adding an activity opens the system's event editor, and SKIES never reads your calendars
 
-- Settings and preferences
-- Bookmarks for posts and activities
-- Reading history (Only IDs, not content)
+## Tips
 
-**Storage**: All data is encrypted before being stored in iCloud using Apple's end-to-end encryption.
+Tips are processed by Apple or Google. SKIES never sees your payment details and keeps no purchase records.
 
-## What We Don't Do
+## Your control
 
-### We Don't Store Your Data on External Servers
+- **Clear Cache** in Settings → Storage & Data removes cached content and images.
+- **Sign out** or **Reset** removes your account data from the device.
+- Deleting the app removes everything it stored locally.
 
-All data is either:
+Data held by your organization's service is managed by your organization. Contact them to access or delete it.
 
-- Stored locally on your device
-- Accessed directly from your organization's Microsoft services
-- Synced via iCloud (if enabled, with encryption)
+## Children
 
-We don't operate any backend servers that store your content or personal information.
+SKIES is meant for members of an organization and is not directed at children.
 
-## Data Security
+## Changes and contact
 
-### Security Features
-
-- **Jailbreak Detection**: Enhanced security checks (35+ detection methods)
-- **Certificate Pinning**: Protection against man-in-the-middle attacks
-- **Token Security**: Automatic token refresh and expiration
-
-## Data Retention
-
-### Manual Control
-
-You can manually clear cache at any time:
-
-- Settings → Storage → Clear All Cache Data
-- This removes all locally stored content
-- Your account remains signed in
-
-## Third-Party Services
-
-### Microsoft Services
-
-SKIES Mobile integrates with:
-
-- **Microsoft Authentication Library (MSAL)**: For secure sign-in
-- **Your Organization's API**: For posts, activities, and content
-
-These services are governed by [Microsoft's Privacy Policy](https://privacy.microsoft.com/).
-
-### Apple Services
-
-When you enable iCloud Sync:
-
-- Data synced via iCloud is governed by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/)
-- All data is encrypted end-to-end
-- Apple cannot access your synced content
-
----
-
-**Last Updated**: October 2025
-**Version**: 1.0
+If this policy changes, the date below is updated. Questions? Email [hello@vakesz.com](mailto:hello@vakesz.com).

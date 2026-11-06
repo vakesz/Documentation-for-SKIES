@@ -1,0 +1,55 @@
+baseURL = "https://skies.vakesz.com/"
+title = "SKIES"
+locale = "en-US"
+enableGitInfo = true
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+rssLimit = 20
+
+[params]
+  description = "SKIES is a native app for your organization's posts, activities and people, on iPhone, iPad and Android."
+  appVersion = "0.9.8" # latest public release; must match a page in content/changelog
+  appStore = "https://apps.apple.com/us/app/skies-mobile/id6752425823"
+  googlePlay = "https://play.google.com/store/apps/details?id=com.vakesz.skies"
+  email = "hello@vakesz.com"
+  github = "https://github.com/vakesz"
+  twitter = "https://twitter.com/vakeszqe"
+
+[permalinks.page]
+  docs = "/docs/:slug/"
+
+[frontmatter]
+  lastmod = [":git", "lastmod", ":fileModTime"]
+
+[outputs]
+  home = ["html"]
+  section = ["html"]
+
+[markup.goldmark.renderer]
+  unsafe = false
+[markup.highlight]
+  noClasses = false
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 2
+
+[minify.tdewolff.html]
+  keepWhitespace = false
+
+[menus]
+  [[menus.main]]
+    name = "Features"
+    pageRef = "/docs/features"
+    weight = 10
+  [[menus.main]]
+    name = "Roadmap"
+    pageRef = "/docs/roadmap"
+    weight = 20
+  [[menus.main]]
+    name = "Changelog"
+    pageRef = "/changelog"
+    weight = 30
+  [[menus.main]]
+    name = "Docs"
+    pageRef = "/docs"
+    weight = 40

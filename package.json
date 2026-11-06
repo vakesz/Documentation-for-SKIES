@@ -1,37 +1,14 @@
 {
-  "name": "skies-mobile-website",
-  "version": "1.0.0",
-  "description": "SKIES Mobile website",
-  "author": "vakesz",
-  "license": "MIT",
+  "name": "skies-website",
   "private": true,
+  "description": "Website for the SKIES app",
+  "license": "MIT",
   "scripts": {
-    "dev": "hugo server --disableFastRender --noHTTPCache",
-    "build": "hugo --minify --gc",
-    "preview": "vite preview --outDir public"
-  },
-  "dependencies": {
-    "@tabler/icons": "^3.44.0",
-    "@thulite/core": "^1.5.9",
-    "@thulite/doks-core": "^1.9.3",
-    "@thulite/images": "^3.3.4",
-    "@thulite/inline-svg": "^1.2.2",
-    "@thulite/seo": "^2.4.3"
+    "dev": "hugo server",
+    "build": "hugo --minify --gc"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.7",
-    "@babel/preset-env": "^7.29.7",
-    "@fullhuman/postcss-purgecss": "^8.0.0",
-    "autoprefixer": "^10.5.2",
-    "hugo-extended": "^0.161.1",
-    "postcss": "^8.5.17",
-    "postcss-cli": "^11.0.1",
-    "prettier": "^3.9.5",
-    "purgecss-whitelister": "^2.4.0",
-    "vite": "^8.1.4"
-  },
-  "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "hugo-extended": "^0.161.1"
   },
   "packageManager": "pnpm@11.1.2"
 }

@@ -1,11 +1,3 @@
-# Hugo resolves theme modules and esbuild `import` statements from the
-# top-level node_modules. pnpm's default isolated layout hides transitive
-# theme dependencies (clipboard, flexsearch, ...) under .pnpm/, which breaks
-# both Hugo module mounts and js.Build. A flat, npm-style layout fixes it.
-nodeLinker: hoisted
-
-# pnpm blocks dependency build scripts by default. These need their
-# postinstall step: esbuild fetches its binary, hugo-extended fetches Hugo.
+# hugo-extended downloads the Hugo binary in its postinstall step.
 allowBuilds:
-  esbuild: true
   hugo-extended: true

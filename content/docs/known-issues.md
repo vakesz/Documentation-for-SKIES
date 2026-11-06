@@ -1,32 +1,18 @@
 ---
 title: "Known Issues"
-description: "Current known issues for SKIES Mobile"
-summary: "This page lists the current known issues and limitations in SKIES Mobile."
-date: 2025-01-01T00:00:00+00:00
-lastmod: 2026-04-20T00:00:00+00:00
-draft: false
+description: "Current known issues and limitations in SKIES."
 weight: 3
-toc: true
-seo:
-  title: "SKIES Mobile Known Issues"
-  description: "Current known issues and limitations in SKIES Mobile. We are actively working to resolve these in future releases."
-  canonical: ""
-  noindex: false
 ---
 
-This page lists the current known issues and limitations in SKIES Mobile. I am actively working to resolve these in future releases.
+Found something that isn't listed? [Let me know](/docs/contact/).
 
-### Unable to like posts, or activities
+## Known issues
 
-- Missing or undocumented API endpoints
-- Need to inspect web client traces and Mobile API
-- Like counts are visible but interactions are disabled
+- **Post order can differ from the web portal.** The service doesn't return posts strictly by date, so the app and the portal may list some posts in a different order.
 
-### Order of posts do not match web
+## Limitations
 
-- API returns items in non-chronological order with creation timestamps
-- Needs to be investigated whether the API supports a different sorting method
-
-## How to Report Issues
-
-If you encounter any issues or have feature requests, please visit the [Contact](/docs/contact/) page.
+- **Comments need a connection.** Comments are always loaded live and aren't available offline.
+- **New-content notifications are best effort.** The system decides when background checks run, so alerts can be delayed or skipped, especially in battery-saving modes.
+- **iCloud Sync, widgets and summaries are Apple-only.** Summaries also need a device with Apple Intelligence on iOS 26 or later.
+- **Tips need a store install.** TestFlight and test builds can't process purchases.

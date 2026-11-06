@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="wrap prose">
+  {{- if eq .Section "changelog" }}
+  <p class="eyebrow"><a href="{{ .Parent.RelPermalink }}">Changelog</a> · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time></p>
+  {{- else }}
+  <p class="eyebrow"><a href="{{ .Parent.RelPermalink }}">Docs</a></p>
+  {{- end }}
+  <h1>{{ .Title }}</h1>
+  {{- if and .Params.toc (gt (len .Fragments.Headings) 0) }}
+  <details class="toc"><summary>On this page</summary>{{ .TableOfContents }}</details>
+  {{- end }}
+  {{ .Content }}
+  {{- if eq .Section "changelog" }}
+  <nav class="pager" aria-label="Releases">
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  </nav>
+  {{- else if not .Lastmod.IsZero }}
+  <p class="updated">Last updated {{ .Lastmod.Format "2 January 2006" }}</p>
+  {{- end }}
+</div>
+{{ end }}

@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ "/" | relURL }}"><img src="{{ "logo.png" | relURL }}" alt="" width="28" height="28">{{ site.Title }}</a>
+    <nav aria-label="Main">
+      {{- /* A page highlights its own menu entry, otherwise the entry of its section. */}}
+      {{- $own := false }}
+      {{- range site.Menus.main }}{{ if $.IsMenuCurrent "main" . }}{{ $own = true }}{{ end }}{{ end }}
+      {{- range site.Menus.main }}
+      {{- $active := or ($.IsMenuCurrent "main" .) (and (not $own) .Page .Page.IsSection (eq .Page.Section $.Section)) }}
+      <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+    </nav>
+  </div>
+</header>

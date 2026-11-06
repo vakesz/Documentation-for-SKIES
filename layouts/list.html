@@ -1,20 +1,18 @@
 {{ define "main" }}
-<div class="row justify-content-center">
-  <div class="col-md-12 col-lg-10 col-xl-8">
-    <article>
-      <h1 class="text-center">{{ if eq .CurrentSection .FirstSection }}{{ .Section | humanize }}{{ else }}{{ .Title }}{{ end }}</h1>
-      {{ with .Content }}<div class="text-center">{{ . }}</div>{{ end }}
-      <div class="card-list">
-        {{ range partial "section-pages.html" . }}
-          <div class="card my-3">
-            <div class="card-body d-flex align-items-center justify-content-between">
-              <a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
-              {{ if .Params.testflight }}{{ partial "changelog/testflight-badge.html" . }}{{ end }}
-            </div>
-          </div>
-        {{ end }}
-      </div>
-    </article>
-  </div>
+<div class="wrap prose">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{- $pages := cond (eq .Section "changelog") .RegularPages.ByDate.Reverse .RegularPages.ByWeight }}
+  <ul class="cards">
+    {{- range $pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        <strong>{{ .Title }}</strong>
+        {{- if eq .Section "changelog" }} <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2006" }}</time>{{ end }}
+        {{ with .Description }}<span>{{ . }}</span>{{ end }}
+      </a>
+    </li>
+    {{- end }}
+  </ul>
 </div>
 {{ end }}

@@ -1,3 +1,0 @@
-{{- /* Regular pages of the current section: newest-first for changelog, by weight otherwise. */ -}}
-{{- $section := .Site.GetPage "section" .Section -}}
-{{- return (cond (eq .Section "changelog") $section.RegularPages.ByDate.Reverse $section.RegularPages.ByWeight) -}}

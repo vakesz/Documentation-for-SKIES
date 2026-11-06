@@ -1,36 +1,16 @@
 {{ define "main" }}
-{{- $version := site.Params.appVersion -}}
-<section class="section container-fluid mt-n3 pb-3">
-  <div class="row justify-content-center">
-    <div class="col-lg-12 text-center">
-      <h1>{{ .Title }}</h1>
-    </div>
-    <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.lead | safeHTML }}</p>
-
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-        <img src="https://img.shields.io/badge/platforms-iOS%20%7C%20iPadOS%20%7C%20macOS-blue" alt="Platforms: iOS, iPadOS, macOS" />
-        <img src="https://img.shields.io/badge/Swift-6.0-orange" alt="Swift 6.0" />
-        <img src="https://img.shields.io/badge/License-GPLv3-green" alt="GPLv3 License" />
-        <a class="d-inline-flex" href="/changelog/{{ $version }}/" aria-label="Latest release {{ $version }}">
-          <img src="https://img.shields.io/badge/Latest%20Release-{{ $version }}-6f42c1" alt="Latest release {{ $version }}" />
-        </a>
-      </div>
-
-      <div class="mb-4">
-        <img src="/images/qr-code.png" alt="Download QR Code" width="200" height="200" class="mb-3" />
-        <p class="text-muted mb-0">iOS and iPadOS 18.0+ • Runs on Apple Silicon Mac via Designed for iPad</p>
-      </div>
-
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="https://apps.apple.com/us/app/skies-mobile/id6752425823" role="button">Download on the App Store</a>
-      <a class="btn btn-outline-primary rounded-pill btn-lg my-3 ms-2" href="/docs/" role="button">Read the Docs</a>
-      <a class="btn btn-link btn-lg my-3 ms-2 text-decoration-none" href="/changelog/{{ $version }}/" role="button">See What’s New in {{ $version }}</a>
-
-      {{ .Content }}
-    </div>
-  </div>
+{{- $latest := index (where (site.GetPage "/changelog").RegularPages.ByDate.Reverse "Draft" false) 0 }}
+<section class="hero wrap">
+  <img class="hero-logo" src="{{ "logo.png" | relURL }}" alt="" width="112" height="112">
+  <h1>{{ site.Title }}</h1>
+  <p class="lead">{{ .Params.lead }}</p>
+  {{ partial "store-buttons.html" . }}
+  <p class="meta">
+    Version {{ site.Params.appVersion }}{{ with $latest }} · <a href="{{ .RelPermalink }}">What’s new</a>{{ end }}
+    · iOS &amp; iPadOS 18+ · Android 14+
+  </p>
 </section>
-{{ end }}
-
-{{ define "sidebar-footer" }}
+<section class="wrap prose home">
+  {{ .Content }}
+</section>
 {{ end }}

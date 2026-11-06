@@ -1,60 +1,24 @@
 ---
 title: "Contact"
-description: "Get in touch with the SKIES Mobile team"
-summary: "I'd love to hear from you! Whether you have questions, feedback, or need support, here are the ways to reach me."
-date: 2025-01-01T00:00:00+00:00
-lastmod: 2025-01-01T00:00:00+00:00
-draft: false
-weight: 7
-toc: true
-seo:
-  title: "Contact SKIES Mobile"
-  description: "Get in touch with the SKIES Mobile development team for bug reports, feature requests, feedback, and general questions about the app."
-  canonical: ""
-  noindex: false
+description: "Report a bug, suggest a feature or ask a question about SKIES."
+weight: 5
 ---
 
-I'd love to hear from you! Whether you have questions, feedback, or need support, here are the ways to reach me.
+Questions, bugs and ideas are all welcome.
 
-- GitHub: [@vakesz](https://github.com/vakesz)
-- Twitter: [@vakeszqe](https://twitter.com/vakeszqe)
 - Email: [hello@vakesz.com](mailto:hello@vakesz.com)
+- GitHub: [@vakesz](https://github.com/vakesz)
+- X/Twitter: [@vakeszqe](https://twitter.com/vakeszqe)
 
-## What to Include
+You can also use **Send Feedback** in the app under Settings → About.
 
-### For Bug Reports
+## Reporting a bug
 
-- iOS version (e.g., iOS 18.0)
-- Device model (e.g., iPhone 15 Pro)
-- App version (found in Settings → About)
-- Steps to reproduce the issue
-- Screenshots if applicable
-- Relevant diagnostic logs (Settings → About → Application Logs)
+Please include:
 
-### For Feature Requests
+- Your device and OS version, for example *iPhone 16, iOS 26.1* or *Pixel 9, Android 16*
+- The app version from Settings → About
+- What you did, what you expected and what happened instead
+- Screenshots, if they help
 
-- Clear description of the desired feature
-- Use case or problem it would solve
-- Any examples from other apps (if applicable)
-- Priority or importance to you
-
-### For General Support
-
-- What you're trying to accomplish
-- What you've already tried
-- Any error messages you're seeing
-
-## Feedback
-
-I value your feedback! Tell me:
-
-- What features you love
-- What could be improved
-- What new features you'd like to see
-- Your experience using the app
-
-Your input helps me prioritize development and improve SKIES Mobile for everyone.
-
-## Thank You
-
-Thank you for using SKIES Mobile and for taking the time to reach out. I appreciate your support and feedback!
+If asked, you can attach logs with **Share Logs** under Settings → About (tap the version). Credentials and tokens are redacted, but logs can include names, URLs and content IDs, so review them before sending.

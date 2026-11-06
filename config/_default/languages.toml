@@ -1,6 +1,0 @@
-[en]
-  label = "English"
-  weight = 10
-  [en.params]
-    languageISO = "EN"
-    languageTag = "en-US"
