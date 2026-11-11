@@ -23,7 +23,8 @@ SKIES is a client app. It connects you to your organization's community service 
 | Your organization's service | Reading posts, activities, profiles and attachments; sending your comments, likes and activity sign-ups |
 | Microsoft sign-in | Signing you in and refreshing your session |
 | Image and video hosts | Loading images, avatars and YouTube thumbnails shown in content |
-| Apple iCloud (optional) | Syncing settings, bookmarks and read state between your Apple devices |
+| Apple iCloud (optional) | Syncing settings, bookmarks, read state and activity history between your Apple devices |
+| Apple Handoff | Which post or activity is open, and its portal link, to your other devices on the same Apple Account |
 | Apple App Store or Google Play | Processing a tip, if you choose to leave one |
 | Expo (optional) | Anonymous performance timings and redacted error reports, only if you turn on **Share Diagnostics** in a build that offers it |
 | Apps you choose | Links, contact details or files you open in a browser, mail, phone, Teams or another app |
@@ -35,6 +36,7 @@ Like any internet request, these hosts see your device's IP address. Each one ha
 - **Account**: sign-in tokens, kept in the iOS keychain or Android keystore.
 - **Content**: posts, activities and profiles, cached in an encrypted database for offline use. Comments are never cached.
 - **Preferences**: settings, bookmarks, read state and recent searches.
+- **Activity history**: the title, date and category of activities you joined. Clear Cache keeps it; signing out or resetting deletes it.
 - **App Lock**: your passcode verifier. Biometric matching is done by the operating system, and SKIES never sees your fingerprint or face data.
 - **Widgets**: the activity, birthday and unread-post information the iOS and Android widgets display.
 - **Spotlight**: on iOS, the title and opening text of posts and activities you opened, for 30 days. Signing out or resetting removes them.
@@ -43,7 +45,11 @@ Like any internet request, these hosts see your device's IP address. Each one ha
 
 ## iCloud Sync
 
-When enabled, SKIES syncs your settings, bookmark changes and a limited read history through Apple's iCloud key-value storage. Content itself is not synced. **Clear iCloud Data** in Settings turns sync off and removes the synced data for your account. iCloud Sync isn't available on Android.
+When enabled, SKIES syncs your settings, bookmark changes, a limited read history and your activity history through Apple's iCloud key-value storage. Content itself is not synced. **Clear iCloud Data** in Settings turns sync off and removes the synced data for your account. iCloud Sync isn't available on Android.
+
+## Handoff
+
+On iPhone and iPad, while a post or activity is open and the app is unlocked and in the foreground, SKIES tells your other devices on the same Apple Account which item is open, so you can continue there. It sends the item's kind and number and its portal link, never its title or text. This follows the Handoff setting in iOS, and the receiving device still needs its own sign-in and App Lock unlock.
 
 ## Share Diagnostics
 

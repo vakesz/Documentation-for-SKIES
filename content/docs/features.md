@@ -14,6 +14,7 @@ SKIES connects to your organization's community service. What you see depends on
 - Unread indicators, badges and **Mark all as read**
 - Likes and comments, including liking comments
 - Bookmarks for posts you want to keep
+- **Keywords**: get an alert when new content mentions a word you choose, see matches tagged in the feed, and filter to them
 
 ## Activities
 
@@ -23,6 +24,7 @@ SKIES connects to your organization's community service. What you see depends on
 - Add an activity to your calendar and get a reminder the day before or on the day
 - **Calendar sync** keeps a SKIES calendar up to date with the activities you join
 - **Notify me when a spot opens** on a full activity
+- **Activity History**: the activities you've joined, with counts by year, month and category
 - A Live Activity on the iOS Lock Screen for the next activity you joined
 - Birthday banners for colleagues celebrating today
 
@@ -44,7 +46,9 @@ SKIES connects to your organization's community service. What you see depends on
 - Posts, activities and profiles are cached in an encrypted database
 - **Keep Bookmarks Offline** saves the text, images and attachments of your bookmarks on the device
 - Background checks for new content can notify you (the system decides when they run)
-- **iCloud Sync** keeps settings, bookmarks and read state in step across your Apple devices
+- Notifications let you mark an item as read without opening the app, and on iOS they can show its image
+- **iCloud Sync** keeps settings, bookmarks, read state and activity history in step across your Apple devices
+- **Handoff**: start reading a post or activity on one Apple device and continue on another
 
 ## Summaries
 
