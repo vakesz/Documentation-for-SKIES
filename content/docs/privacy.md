@@ -10,7 +10,7 @@ SKIES is a client app. It connects you to your organization's community service 
 
 ## Summary
 
-- No analytics, advertising or tracking SDKs
+- No advertising or tracking SDKs, and no analytics unless you turn on **Share Diagnostics**
 - No SKIES backend: your content goes only to your organization's service
 - Cached content is encrypted on your device
 - Summaries are generated on your device
@@ -25,6 +25,7 @@ SKIES is a client app. It connects you to your organization's community service 
 | Image and video hosts | Loading images, avatars and YouTube thumbnails shown in content |
 | Apple iCloud (optional) | Syncing settings, bookmarks and read state between your Apple devices |
 | Apple App Store or Google Play | Processing a tip, if you choose to leave one |
+| Expo (optional) | Anonymous performance timings and redacted error reports, only if you turn on **Share Diagnostics** in a build that offers it |
 | Apps you choose | Links, contact details or files you open in a browser, mail, phone, Teams or another app |
 
 Like any internet request, these hosts see your device's IP address. Each one handles data under its own privacy policy, for example [Microsoft](https://privacy.microsoft.com/), [Apple](https://www.apple.com/legal/privacy/) and [Google](https://policies.google.com/privacy).
@@ -35,12 +36,18 @@ Like any internet request, these hosts see your device's IP address. Each one ha
 - **Content**: posts, activities and profiles, cached in an encrypted database for offline use. Comments are never cached.
 - **Preferences**: settings, bookmarks, read state and recent searches.
 - **App Lock**: your passcode verifier. Biometric matching is done by the operating system, and SKIES never sees your fingerprint or face data.
-- **Widgets**: the activity and birthday information the iOS widgets display.
-- **Diagnostics**: a short, in-memory log with sensitive values redacted. It is never saved to disk or sent anywhere.
+- **Widgets**: the activity, birthday and unread-post information the iOS and Android widgets display.
+- **Spotlight**: on iOS, the title and opening text of posts and activities you opened, for 30 days. Signing out or resetting removes them.
+- **Calendar**: if you turn on calendar sync, a SKIES calendar holding the activities you joined.
+- **Diagnostics**: a short, in-memory log with sensitive values redacted. It is never saved to disk, and it leaves the device only if you share it yourself.
 
 ## iCloud Sync
 
 When enabled, SKIES syncs your settings, bookmark changes and a limited read history through Apple's iCloud key-value storage. Content itself is not synced. **Clear iCloud Data** in Settings turns sync off and removes the synced data for your account. iCloud Sync isn't available on Android.
+
+## Share Diagnostics
+
+Some builds offer **Share Diagnostics** under Settings → Security. It is off by default. When you turn it on, the app may send Expo launch and screen timings, the kind of screen shown (never which post, activity or person), the app and OS version, the device model, a random installation identifier, crash reports and redacted error lines. Account data and content are not collected. Turning it off stops sending at once. Builds without this option contain no telemetry code.
 
 ## Summaries
 
@@ -52,7 +59,7 @@ SKIES asks for permissions only when you use the related feature:
 
 - **Notifications** for new content and activity reminders
 - **Face ID or biometrics** for App Lock
-- **Calendar**: adding an activity opens the system's event editor, and SKIES never reads your calendars
+- **Calendar**: adding a single activity opens the system's event editor and needs no access. Calendar sync is optional and asks for full calendar access; SKIES then creates its own calendar and reads and changes only that one. Turning sync off deletes it.
 
 ## Tips
 

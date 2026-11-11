@@ -15,9 +15,8 @@ Plans change with feedback and with what the service's API allows. Have an idea?
 
 ## Ideas
 
-- **Live Activities** for events happening now
-- **Android widgets** to match the iOS ones
 - **Apple Watch** app with upcoming activities and quick sign-up
 - **Creating and editing** posts and activities, if the API allows it
 - **Personal history**: past events you attended, with simple stats
 - **Activity suggestions** based on what you've joined before
+- **Multiple sites**: switch between more than one organization in the app

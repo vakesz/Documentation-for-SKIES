@@ -12,7 +12,7 @@ SKIES connects to your organization's community service. What you see depends on
 - Latest news and announcements, with pinned posts at the top
 - Rich text, images, YouTube videos and attachments
 - Unread indicators, badges and **Mark all as read**
-- Likes and comments, including replies and liking comments
+- Likes and comments, including liking comments
 - Bookmarks for posts you want to keep
 
 ## Activities
@@ -21,6 +21,9 @@ SKIES connects to your organization's community service. What you see depends on
 - Sign up with guests and answers to the organizer's question, or join the waitlist when it's full
 - Participant list with capacity, attendance and dietary notes
 - Add an activity to your calendar and get a reminder the day before or on the day
+- **Calendar sync** keeps a SKIES calendar up to date with the activities you join
+- **Notify me when a spot opens** on a full activity
+- A Live Activity on the iOS Lock Screen for the next activity you joined
 - Birthday banners for colleagues celebrating today
 
 ## People
@@ -34,10 +37,12 @@ SKIES connects to your organization's community service. What you see depends on
 - One search across posts, activities and people
 - Accent-insensitive: "kovacs" finds "Kovács"
 - Works offline on cached content and remembers recent searches on the device
+- On iOS, posts and activities you opened also appear in Spotlight
 
 ## Offline and sync
 
 - Posts, activities and profiles are cached in an encrypted database
+- **Keep Bookmarks Offline** saves the text, images and attachments of your bookmarks on the device
 - Background checks for new content can notify you (the system decides when they run)
 - **iCloud Sync** keeps settings, bookmarks and read state in step across your Apple devices
 
@@ -47,8 +52,9 @@ On iOS 26 devices with Apple Intelligence, SKIES can summarize long posts and ac
 
 ## Widgets and shortcuts
 
-- **Next Activity** and **Birthdays** widgets for the iOS home screen
+- **Next Activity**, **Birthdays** and **Unread Posts** widgets for the iOS and Android home screen
 - Long-press the app icon to jump to posts, activities, search or your QR code
+- Keyboard shortcuts on iPhone and iPad with a hardware keyboard; hold ⌘ to see them
 
 ## Make it yours
 
@@ -56,6 +62,7 @@ On iOS 26 devices with Apple Intelligence, SKIES can summarize long posts and ac
 - Wallpaper colors on Android
 - Alternate app icons, including seasonal ones
 - In-app or system browser for links
+- A Safari extension on iOS that opens portal links in SKIES
 - Guided setup on first launch, which you can replay from Settings
 
 ## Security
